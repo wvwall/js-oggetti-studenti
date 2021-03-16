@@ -16,7 +16,43 @@ $(document).ready(function () {
     }
 
 //Creare array di oggetti studenti
-//Ciclare ogni oggetto studento stampando proprietà nome congome
+
+    var studenti = [
+
+       studente1 = {
+            nome : "Walter ",
+            cognome : "Velardo",
+            eta : 25,
+        },
+       studente2 = {
+            nome : "Aldo ",
+            cognome : "Baglio",
+            eta : 62,
+        },
+       studente3 = {
+            nome : "Giovanni ",
+            cognome : "Storti",
+            eta : 64,
+        },
+       studente4 = {
+            nome : "Giacomo ",
+            cognome : "Poretti",
+            eta : 64,
+        }
+
+    ];
+    
+    
+
+//Ciclare ogni oggetto studente stampando proprietà nome cognome
+
+    console.log("NOME E COGNOME STUDENTI:");   
+
+    for (var i = 0; i < studenti.length; i++) {
+        console.log(studenti[i].nome + "" + studenti[i].cognome);
+        
+    }
+
 //Chiedere all'utente tramite tramite form di aggiungre un nuovo oggetto studente 
 //inserendo nome cogmone età
 });
