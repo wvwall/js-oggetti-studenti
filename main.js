@@ -19,22 +19,22 @@ $(document).ready(function () {
 
     var studenti = [
 
-       studente1 = {
+       {
             nome : "Walter ",
             cognome : "Velardo",
             eta : 25,
         },
-       studente2 = {
+        {
             nome : "Aldo ",
             cognome : "Baglio",
             eta : 62,
         },
-       studente3 = {
+        {
             nome : "Giovanni ",
             cognome : "Storti",
             eta : 64,
         },
-       studente4 = {
+        {
             nome : "Giacomo ",
             cognome : "Poretti",
             eta : 64,
@@ -46,13 +46,43 @@ $(document).ready(function () {
 
 //Ciclare ogni oggetto studente stampando proprietà nome cognome
 
-    console.log("NOME E COGNOME STUDENTI:");   
-
+    console.log("NOME E COGNOME STUDENTI:");  
     for (var i = 0; i < studenti.length; i++) {
+
         console.log(studenti[i].nome + "" + studenti[i].cognome);
         
-    }
+    } 
+
+    
 
 //Chiedere all'utente tramite tramite form di aggiungre un nuovo oggetto studente 
 //inserendo nome cogmone età
+
+    $("#invia").click(function () { 
+
+        var nome = $("#name").val();
+        var cognome = $("#surname").val();
+        var eta = parseInt($("#eta").val());
+        
+        var studente = {
+            nome : nome,
+            cognome : cognome,
+            eta : eta,
+        }
+        studenti.push(studente);
+
+        for (var i = 0; i < studenti.length; i++) {
+
+            console.log(studenti[i]);
+            
+        }
+    });
+
+
+
+
+
+    
+
+
 });
