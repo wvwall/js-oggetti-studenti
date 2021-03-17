@@ -21,22 +21,22 @@ $(document).ready(function () {
 
        {
             nome : "Walter ",
-            cognome : "Velardo",
+            cognome : "Velardo ",
             eta : 25,
         },
         {
             nome : "Aldo ",
-            cognome : "Baglio",
+            cognome : "Baglio ",
             eta : 62,
         },
         {
             nome : "Giovanni ",
-            cognome : "Storti",
+            cognome : "Storti ",
             eta : 64,
         },
         {
             nome : "Giacomo ",
-            cognome : "Poretti",
+            cognome : "Poretti ",
             eta : 64,
         }
 
@@ -50,6 +50,7 @@ $(document).ready(function () {
     for (var i = 0; i < studenti.length; i++) {
 
         console.log(studenti[i].nome + "" + studenti[i].cognome);
+        $("#lista").append("<li>" + studenti[i].nome + "" + studenti[i].cognome + "</li>");
         
     } 
 
@@ -74,6 +75,7 @@ $(document).ready(function () {
         for (var i = 0; i < studenti.length; i++) {
 
             console.log(studenti[i]);
+            $("#lista_update").append("<li>" + studenti[i].nome + "" + studenti[i].cognome + studenti[i].eta + "</li>");
             
         }
     });
